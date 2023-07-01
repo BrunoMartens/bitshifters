@@ -1,0 +1,48 @@
+<div>
+    <form [formGroup]="form">
+        <div class="bs-blog-props">
+            <div>
+                <mat-form-field class="example-form-field bs-input">
+                    <mat-label>Title</mat-label>
+                    <input matInput type="text" formControlName="title">
+                </mat-form-field>
+            </div>
+            <div class="bs-blog-content-input">
+                <mat-form-field class="bs-input">
+                    <mat-label>Description</mat-label>
+                    <textarea matInput formControlName="description"></textarea>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="example-form-field bs-input">
+                    <mat-label>Tags</mat-label>
+                    <input matInput type="text" formControlName="tags">
+                </mat-form-field>
+            </div>
+            <div class="bs-form-date">
+                <div>
+                    <mat-form-field class="example-form-field">
+                        <mat-label>Month</mat-label>
+                        <input matInput type="number" formControlName="month">
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field class="example-form-field">
+                        <mat-label>Year</mat-label>
+                        <input matInput type="number" formControlName="year">
+                    </mat-form-field>
+                </div>
+            </div> 
+        </div>
+        <div class="bs-blog-content">
+            <div class="bs-blog-content-input">
+                <mat-form-field class="bs-input">
+                    <mat-label>Content</mat-label>
+                    <textarea matInput class="bs-blog-content-input-area" formControlName="content"></textarea>
+                </mat-form-field>
+            </div>
+            <div #preview class="bs-blog-content-preview">
+            </div>
+        </div> 
+    </form>
+</div>

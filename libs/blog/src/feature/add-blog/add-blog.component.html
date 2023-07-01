@@ -1,0 +1,17 @@
+<div class="bs-card">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                Add Blog Entry
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="bs-card-content">
+                <bitshifters-blog-form #blog></bitshifters-blog-form>
+            </div>
+        </mat-card-content>
+        <mat-card-actions align="end">
+            <button mat-raised-button color="primary" (click)="saveBlog()">Save</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

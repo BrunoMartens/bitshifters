@@ -1,6 +1,7 @@
 import { Controller, Get, Post, Body, Param } from '@nestjs/common';
 
 import { BlogService } from './blog.service';
+import { Blog } from '../domain/blog';
 
 @Controller('blogs')
 export class BlogController {
@@ -11,13 +12,14 @@ export class BlogController {
     return this.blogService.findAll();
   }
 
-  /*@Get(':entryId')
-  findById(@Param('entryId') entryId) {
-    return this.entriesSrv.findById(entryId);
+  @Post()
+  async save(@Body() blog: Blog) {
+    return await this.blogService.save(blog);
   }
 
-  @Post()
-  create(@Body() entry) {
-    return this.entriesSrv.create(entry);
+
+  /*findById(id) {
+    return this.entriesSrv.findById(entryId);
   }*/
+
 }

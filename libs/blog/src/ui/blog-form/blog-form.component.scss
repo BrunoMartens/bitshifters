@@ -1,0 +1,38 @@
+.bs-blog-content {
+    display: flex;
+    justify-content: stretch;
+}
+
+.bs-top {
+    display: flex;
+}
+
+.bs-title {
+    flex-grow: 2;
+    margin-right: 16px;
+}
+
+.bs-input {
+    width: 100%;
+}
+
+.bs-form-date {
+    display: flex;
+    div {
+        margin-right: 16px;
+    }
+}
+
+.bs-blog-content-input {
+    flex-grow: 2;
+    padding-right: 16px;
+
+}
+
+.bs-blog-content-input-area {
+    width: 100%;
+}
+
+.bs-blog-content-preview {
+    flex-grow: 2;
+}

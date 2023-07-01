@@ -1,1 +1,32 @@
-<p>blogs works!</p>
+<div class="bs-blogs-container">
+    <div class="bs-blogs-overview">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>
+                    Latest Blogs
+                </mat-card-title>
+            </mat-card-header> 
+            <mat-card-content>
+                <div *ngFor="let blog of blogs"
+                    class="bs-blog-overview"
+                    [routerLink]="[blog.year, blog.month, blog.titleKebab]">
+                    <div class="bs-blog-title">{{blog.title}}</div>
+                    <div class="bs-blog-description">{{blog.description}}</div>
+                </div>       
+            </mat-card-content>
+        </mat-card>
+    </div> 
+    <div class="bs-blogs-filter">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>
+                    Filters
+                </mat-card-title>
+            </mat-card-header> 
+            <mat-card-content>    
+            </mat-card-content>
+        </mat-card>
+    </div>  
+</div>
+
+

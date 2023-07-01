@@ -1,0 +1,27 @@
+
+
+
+.bs-blog-overview {
+    cursor: pointer;
+}
+
+.bs-blog-title {
+    margin-top:16px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 780px) {
+    .bs-blogs-container {
+        display: flex;
+    }
+
+    .bs-blogs-overview {
+        flex-grow:2;
+        margin-right: 16px;
+    }
+    
+    .bs-blogs-filter {
+        width: 280px;
+    }
+}

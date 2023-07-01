@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogService } from '../blog.service';
+import { Blog } from '../../domain/blog';
 
 @Component({
   selector: 'bitshifters-blogs',
@@ -8,9 +9,11 @@ import { BlogService } from '../blog.service';
 })
 export class BlogsComponent implements OnInit{
 
+  blogs?: Blog[];
+
   constructor(private blogService: BlogService) {}
 
   ngOnInit(): void {
-    this.blogService.getBlogs().subscribe(blogs => console.log(blogs));
+    this.blogService.getBlogs().subscribe(blogs => this.blogs = blogs);
   }
 }

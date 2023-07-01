@@ -1,27 +1,39 @@
-<div class="mdc-card bs-header">
-    <div class="bs-header-container">
-        <div class="bs-header-title"><b>>>bitshifters</b></div>
-        <div class="bs-header-nav">
-            <div>[blog]</div>
-            <div>[apps]</div>
-            <div>[login]</div>
-        </div>
-        <div class="bs-header-nav-button">
-            <button class="mdc-icon-button material-icons bs-menu-button" (click)="toggleMenu()">
-                <div class="mdc-icon-button__ripple"></div>
-                menu
-            </button>    
-        </div>
-    </div>   
+<div class="bs-header">
+    <mat-card>
+        <mat-card-content>
+            <div class="bs-header-container">
+            <div class="bs-header-title"><b>>>bitshifters</b></div>
+            <div class="bs-header-nav">
+                <div>[blog]</div>
+                <div>[apps]</div>
+                <div>[login]</div>
+            </div>
+            <div class="bs-header-nav-button">
+                <button class="mdc-icon-button material-icons bs-menu-button" (click)="toggleMenu()">
+                    <div class="mdc-icon-button__ripple"></div>
+                    menu
+                </button>    
+            </div>
+        </div> 
+        </mat-card-content>
+    </mat-card>     
 </div>
 <div class="bs-header-nav-dropdown" [class]="{'bs-visible':menuOpened$ | async}">
-    <div bitshiftersHilite>blog</div>
-    <div bitshiftersHilite>apps</div>
-    <div bitshiftersHilite>login</div>
+    <mat-card>
+        <mat-card-content>
+            <div bitshiftersHilite>[blog]</div>
+            <div bitshiftersHilite>[apps]</div>
+            <div bitshiftersHilite>[login]</div>
+        </mat-card-content>
+    </mat-card>
 </div>
-<div class="mdc-card bs-welcome">
-    <div>
-        <p>Welcome to <span class="bs-logo">&gt;&gt;bitshifters</span>, my web development lab. I am <b>Bruno Martens</b>, a full stack developer from Ostend, Belgium. Professionally, I'm coding mostly using Angular and NodeJS (Typescript) and .NET (C#).</p>
-        <p>Under <b>[apps]</b> you can find projects I did for fun, or to help me understand a concept, or just to check things out. Under <b>[blog]</b> you'll find articles I wrote about the apps or on other interests. Some apps require you to <b>[login]</b>, as does commenting.</p>
-    </div> 
+<div class="bs-welcome">
+    <mat-card>
+        <mat-card-content>
+            <div>
+                <p>Welcome to <span class="bs-logo">&gt;&gt;bitshifters</span>, my web development lab. I am <b>Bruno Martens</b>, a full stack developer from Ostend, Belgium. Professionally, I'm coding mostly using Angular and NodeJS (Typescript) and .NET (C#).</p>
+                <p>Under <b>[apps]</b> you can find projects I did for fun, or to help me understand a concept, or just to check things out. Under <b>[blog]</b> you'll find articles I wrote about the apps or on other interests. Some apps require you to <b>[login]</b>, as does commenting.</p>
+            </div>
+        </mat-card-content>
+    </mat-card>
 </div>
